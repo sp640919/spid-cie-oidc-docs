@@ -4,13 +4,6 @@
 Trust Mark per SPID
 +++++++++++++++++++
 
-TBD esempi non normativi
-
-Esempi di Trust Mark SPID
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-I TM emessi per le foglie DEVONO essere pubblicati dalle foglie stesse nelle proprie **Entity Configuration**, all'interno dell'attributo **trust_marks**. Questo è composto da liste di oggetti JSON, ognuno dei quali DEVE contenere almeno gli attributi **id** e **trust_mark**, il primo identifica il TM, il secondo contiene il JWT firmato del TM.
-
 Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno della Entity Configuration di una Foglia di tipo RP.
 
 
@@ -19,7 +12,7 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno del
  {
      "trust_marks":[
          {
-             "id":"https://www.spid.gov.it/openid-federation/agreement/sp-public/",
+             "id":"https://www.spid.gov.it/openid_relying_party/public/",
              "trust_mark":"$JWT"
          }
      ]
@@ -34,7 +27,7 @@ Quello che segue è un esempio non normativo di un marchio di fiducia emesso dal
  {
      "trust_marks":[
          {
-             "id":"https://registry.agid.gov.it/federation_entity/private/",
+             "id":"https://registry.agid.gov.it/federation_entity/private/light/",
              "trust_mark":"$JWT"
          }
      ]
@@ -45,7 +38,7 @@ Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corr
 .. code-block::
 
  {
-     "id":"https://registry.agid.gov.it/federation_entity/private/",
+     "id":"https://registry.agid.gov.it/federation_entity/private/light/",
      "iss":"https://registry.agid.gov.it",
      "sub":"https://intermediary.example.it",
      "iat":1579621160,
