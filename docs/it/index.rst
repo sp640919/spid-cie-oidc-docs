@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 =======================
 SPID/CIE OpenID Connect
@@ -16,11 +16,11 @@ pubblici e privati (RP), Identity Providers (OP) e Soggetti Aggregatori (SA).
 
 In questa documentazione trovi:
 
- - gli esempi pratici dei Metadata, delle richieste e delle risposte OpenID Connect,
- - come effettuare la registrazione automatica dei RP presso gli OpenID Provider, 
- - come un OpenID Provider riconosce e registra dinamicamente un RP,
- - come utilizzare gli endpoint della API della Federazione,
- - come autenticare un utente a SPID e CIE ed ottenere i suoi attributi.
+ - Gli esempi pratici dei Metadata, delle richieste e delle risposte OpenID Connect.
+ - Come effettuare la registrazione automatica dei RP presso gli OpenID Provider.
+ - Come un OpenID Provider riconosce e registra dinamicamente un RP.
+ - Come utilizzare gli endpoint della API della Federazione.
+ - Come autenticare un utente a SPID e CIE ed ottenere i suoi attributi.
 
 
 Indice dei contenuti
@@ -43,12 +43,12 @@ Indice dei contenuti
    parametri_scope_claims.rst
    flusso_autenticazione.rst
    authorization_endpoint.rst
-   authentication_response.rst
    token_endpoint.rst
    userinfo_endpoint.rst
    attributi_utente.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
+   confronto_oidc_cie_e_oidc_igov.rst
    differenze_oidc_fed.rst
    seccons_bcps.rst
    esempi.rst

@@ -1,13 +1,15 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 Token Endpoint (richiesta token)
 --------------------------------
 
-Il Token Endpoint rilascia un *Access Token, un ID Token e un Refresh Token*. Il RP invia una richiesta al Token Endpoint:
+Il RP invia una richiesta al Token Endpoint:
 
  1. al termine del flusso di autenticazione descritto nel paragrafo precedente, inviando l'authorization code ricevuto dall'OP (esempio, code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un Access Token ed eventualmente un Refresh Token (se è stata avviata una `sessione lunga revocabile`_)
 
  2. in presenza di una `sessione lunga revocabile`_, il RP chiama il Token Endpoint inviando il Refresh Token in suo possesso per ottenere un nuovo Access Token.
+
+Il Token Endpoint rilascia un *Access Token, un ID Token ed opzionalmente un Refresh Token*. 
 
 .. seealso:: 
 
@@ -112,7 +114,7 @@ Response
 
 L'OpenID Provider (OP) restituisce un ID Token e Access Token e un eventuale Refresh Token, in formato JWT firmato.
 
-L'Access Token deve essere formato secondo le indicazioni dello standard "International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", paragrafo 3.2.1, "JWT Bearer Tokens".
+L'Access Token deve essere formato secondo le indicazioni dello standard `"International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", section 3.2.1, "JWT Bearer Tokens" <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.2.1>`_.
 
 L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 
@@ -161,8 +163,8 @@ L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che 
 
  {
      "iss":"https://op.spid.agid.gov.it/",
-     "sub":"OP-1234567890",
-     "aud":"https://rp.spid.agid.gov.it/auth",
+     "sub":"9sd798asd98asui23hiuds89y798sfyg",
+     "aud":"https://rp.spid.example.it/auth",
      "acr":"https://www.spid.gov.it/SpidL2",
      "at_hash":"qiyh4XPJGsOZ2MEAyLkfWqeQ",
      "iat":1519032969,

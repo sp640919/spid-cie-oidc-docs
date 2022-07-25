@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 
 .. _Entity_Configuration:
@@ -104,12 +104,14 @@ Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono 
      - **Descrizione**
      - **Supportato da**
    * - **constraints**
-     - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA. 
+     - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
      - |spid-icon| |cieid-icon|
    * - **trust_marks_issuers**
      - JSON Array che indica quali autorità sono considerate attendibili nella Federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
      - |spid-icon| |cieid-icon|
 
+
 .. seealso:: 
 
    - :ref:`Esempio di EC di un TA <Esempio_EN1.4>` 
+

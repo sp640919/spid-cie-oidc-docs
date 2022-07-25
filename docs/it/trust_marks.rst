@@ -1,5 +1,4 @@
-.. include:: ./common_definitions.rst
-
+.. include:: ../common/common_definitions.rst
 
 .. _Trust_Mark:
 
@@ -40,13 +39,13 @@ Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'inte
 
 I Trust Mark rappresentano il primo filtro per l'instaurazione della fiducia tra le parti, sono elementi indispensabili per avviare la risoluzione dei metadati. In loro assenza una entità non è riconoscibile come partecipante all’interno della Federazione.
 
-All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **https:// <domain> / <entity_type> / <trustmark_profile> / [estensione /]**
+All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **https:// <domain> / <entity_type> / [<trustmark_profile> /] [estensione /]**
 
 Alcuni esempi non normativi sono di seguito riportati:
 
 
  - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
- - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/full/**
+ - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/**
  - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
@@ -91,17 +90,17 @@ La tabella seguente definisce i <trustmark_profile> riconoscibili all'interno de
       - RP, OP, SA, AA
 
 
-**federation_entity** Trust Mark
+federation_entity Trust Mark
 --------------------------------
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiungendo le estensioni **full** e **light**, 
+In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, 
 a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
 
 .. seealso::
 
     Si veda Sezione :ref:`Soggetti aggregatori nel contesto Federativo <Soggetti_aggregatori>`
 
-**oauth_resource**  Trust Mark
+oauth_resource  Trust Mark
 ------------------------------------------
 
 In aggiunta ai claim dei profili **public** e **private**, il profilo **oauth_resource** individua le AA e aggiunge i seguenti claim obbligatori:
@@ -171,7 +170,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
         es. non normativo: ``https://registry.interno.gov.it/openid_relying_party/public/``
       - |spid-icon| |cieid-icon|
     * - **iat**
-      - UNIX Timestamp con l'istante di geerazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
       - String. Un URL che punta al logo rappresentante il Trust Mark.
@@ -180,7 +179,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL che punta a informazioni presenti sul web relative a questo marchio di fiducia
+      - String. URL che punta a informazioni presenti sul web relative a questo Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **organization_type**
       - String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
@@ -195,9 +194,12 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
     * - **organization_name**
       - String. Il nome completo dell'entità che fornisce i servizi
       - |spid-icon| |cieid-icon|
+    * - **sa_profile**
+      - String. RICHIESTO per SA. Specifica il profilo dell’Aggregatore, **full** o **light**.
+      - |spid-icon| |cieid-icon|
 
 .. warning::
-  Nel caso di CIEid, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *"<IPA_code>-<AOO_code>"*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra il MinInterno e le organizzazioni che ricevono il TM.  
+  Nel caso di CIE id, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *<IPA_code>-<AOO_code>*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra l'emettitore dei Trust Mark e le organizzazioni che ricevono il TM.  
 
 .. seealso::
 

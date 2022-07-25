@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 Standard di riferimento
 -----------------------
@@ -61,7 +61,3 @@ Standard di riferimento
     * - `ICAO-Doc9303`_
       - INTERNATIONAL CIVIL AVIATION ORGANIZATION, "Machine Readable Travel Documents, Seventh Edition, 2015, 
         Part 3: Specifications Common to all MRTDs", 2015
-    * - CIE-OIDC-FED
-      - CIE OIDC Federation – at the writing stage
-    * - CIE-OIDC-CORE: 
-      - CIE OpenID Connect Core – Web App Specifications

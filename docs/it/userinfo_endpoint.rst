@@ -1,9 +1,12 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 UserInfo Endpoint (attributi)
 -----------------------------
 
 Lo UserInfo Endpoint è una risorsa protetta OIDC che restituisce gli attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il RP inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access Token.
+
+Request
++++++++
 
 Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`.
 
