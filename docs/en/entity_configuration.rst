@@ -52,7 +52,7 @@ Entity Configuration - common claims
        :ref:`Metadata<metadata_oidc>` and each value MUST be a JSON Object that represents
        the Metadata, according to the Metadata schema of that type.
 
-       An Entity configuration CAN contain more Metadata statements, but only one for each type of
+       An Entity configuration MAY contain more Metadata statements, but only one for each type of
        Metadata (<**entity_type**>). 
 
        The allowed types are the following:
@@ -85,14 +85,18 @@ the following claims:
      - **Supported by**
    * - **authority_hints**
      - Array if URLs. It contains a list of URLs of the superior Entities, such as TA or SA, 
-       that CAN issue an ES related to this subject.
+       that MAY issue an ES related to this subject.
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
      - A JSON Array containing the Trust Marks. See the Section :ref:`Trust Mark <Trust_Mark>`. 
        Required for all the members except the Trust Anchor.
      - |spid-icon| |cieid-icon|
 
+.. seealso:: 
 
+   - :ref:`Non-normative example of EC of an OP<Esempio_EN1.2>`
+   - :ref:`Non-normative example of EC of a RP<Esempio_EN1.1>`
+   - :ref:`Non-normative example of EC of a Federation Intermediary (SA)<Esempio_EN1.3>`
 
 .. _entity_configuration_ta:
 
